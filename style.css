@@ -1,15 +1,29 @@
+@font-face {
+    font-family: neuton;
+    src: url(./Neuton-ExtraBold.ttf);
+    font-weight: 800;
+}
+@font-face {
+    font-family: neuton;
+    src: url(./Neuton-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: neuton;
+    src: url(./Neuton-ExtraLight.ttf);
+    font-weight: 100;
+}
+@font-face {
+    font-family: neuton;
+    src: url(./Neuton-Regular.ttf);
+    font-weight: 300;
+}
+
 :root{
     --pri:#000;
     --sec:rgb(245, 243, 234);
     --mi:rgb(21, 27, 49);
 }
-
-
-
-
-
-
-
 
 *{
     margin:0;
@@ -175,6 +189,12 @@ html,body{
     height:25px;
     width:25px;
     object-fit: cover;
+   animation: move;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   animation-fill-mode: forwards;
+   animation-delay: 0.1;
    
 
 }
@@ -197,9 +217,16 @@ html,body{
     height:40px;
     width:40px;
     object-fit: cover;
+    animation: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1;
 }
 #left-center img{
    height:200px;
+  
    
 }
 #page1 #top-right{
@@ -213,6 +240,12 @@ html,body{
 #top-right img{
     height:40px;
     width:40px;
+    animation: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1;
 }
 
 #page1 #right-center{
@@ -226,6 +259,12 @@ html,body{
 #right-center img{
      height:20px;
      width:20px;
+     animation: move;
+     animation-duration: 3s;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+     animation-fill-mode: forwards;
+     animation-delay: 0.1;
 }
 #page2{
     min-height: 100vh;
@@ -364,4 +403,9 @@ html,body{
     margin-top: 40px;
     margin: 20px;
 
+}
+@keyframes move {
+    0%{
+      rotate: 360deg;
+    }
 }

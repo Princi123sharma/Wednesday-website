@@ -1,3 +1,47 @@
+var tl=gsap.timeline({
+
+});
+tl.from("#nav h1,#nav2 h4,#nav3 i,#nav3 h4",{
+    duration:1,
+    opacity:0,
+    y:-50,
+    stagger:0.1,
+})
+tl.from("#center1 h1",{
+    duration:0.6,
+    opacity:0,
+    y:30,
+    scale:1.2,
+})
+tl.from("#center1 p",{
+   duration:0.4,
+   opacity:0,
+   y:40,
+
+})
+tl.from("#page1 img",{
+    duration:1,
+   
+    y:30,
+    opacity:0,
+    scale:1.3,
+})
+tl.from("#section1 h1,#section1 p",{
+    duration:2,
+   
+    opacity:0,
+   x:-200,
+    stagger:0.25,
+    ScrollTrigger:{
+        Trigger:"#section1",
+        scroller:"body",
+        markers:true,
+        start:"top 60%",
+        end:"top 30%",
+        scrub:2,
+    }
+    
+})
 
 var moon=document.querySelector("#moon")
 var flag=0;
