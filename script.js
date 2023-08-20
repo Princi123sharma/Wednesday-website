@@ -1,5 +1,5 @@
 var tl=gsap.timeline({
-
+    
 });
 tl.from("#nav h1,#nav2 h4,#nav3 i,#nav3 h4",{
     duration:1,
@@ -26,21 +26,46 @@ tl.from("#page1 img",{
     opacity:0,
     scale:1.3,
 })
-tl.from("#section1 h1,#section1 p",{
-    duration:2,
-   
+
+tl.from("#page2 #section1 h1",{
+    y:40,
+    duration:0.8,
     opacity:0,
-   x:-200,
-    stagger:0.25,
-    ScrollTrigger:{
-        Trigger:"#section1",
+    scale:1.5,
+    scrollTrigger:{
+        trigger:"#page2",
         scroller:"body",
         markers:true,
-        start:"top 60%",
-        end:"top 30%",
-        scrub:2,
-    }
+        start:"top 180%"
+     }
+
+})
+tl.from("#page2 #section1 p",{
+    y:30,
+    duration:0.9,
+    opacity:0,
+   
+    scrollTrigger:{
+        trigger:"#page2",
+        scroller:"body",
+        markers:true,
+        start:"top 180%"
+     }
+
+})
+gsap.from("#section2 .firstimg",{
     
+    opacity:0,
+   
+    scale:1.1,
+    
+    scrollTrigger:{
+        trigger:"#section2 .firstimg",
+        scroller:"body",
+        markers:true,
+        start:"top 80%",
+       
+     }
 })
 
 var moon=document.querySelector("#moon")
